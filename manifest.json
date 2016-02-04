@@ -8,28 +8,17 @@
    "default_icon": "icon.png",
    "default_popup": "popup.html"
   },
-  "backgroud" : {
-    "scripts": ["background.js"]
+  "background" : {
+    "scripts": ["background.js", "moment.js"]
   },
-  "content_scripts" : [{
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": ["jquery.min.js"]
-  }],
   "permissions": [
-   "activeTab",
    "browsingData",
    "alarms",
    "background",
    "contentSettings",
    "history",
-   "idle",
-   "power",
    "storage",
    "notifications",
-   "topSites",
-   "wallpaper",
    "webRequest",
    "webRequestBlocking",
    "tabs"
