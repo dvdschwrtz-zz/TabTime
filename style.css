@@ -1,0 +1,37 @@
+body {
+  width: 200px;
+  height: 250px;
+  margin: 0 0;
+  padding: 0 0;
+  background-color: #616161;
+  font-family: sans-serif;
+}
+
+.topRow button, .bottomRow button {
+  float: left;
+  width: 100px;
+  height: 100px;
+  outline: none;
+  background-color: #E0E0E0;
+  font-size: 14px;
+  border-style: solid;
+}
+
+#popupTitle {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+#popupTitle span {
+  font-weight: bold;
+}
+
+#btnSettings {
+  height: 50px;
+  width: 200px;
+  outline: none;
+  background-color: #E0E0E0;
+  font-size: 14px;
+  border-style: solid;
+}

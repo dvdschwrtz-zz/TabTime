@@ -1,21 +1,27 @@
 <!doctype html>
 <html>
   <head>
-    <title>Tab Nap</title>
-    <link rel="stylesheet" href="skeleton.css">
-    <link rel="stylesheet" href="normalize.css">
+    <title>Tab Time</title>
+    <!-- <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="style.css">
     <script src="popup.js"></script>
     <script src="moment.js"></script>
   </head>
   <body>
-    <div float="left">
-      <p>
-        Tab Nap
-      </p>
-      <button class="button" width ="15px" id="15sec">15s</button>
-      <button class="button" width ="15px" id="30sec">30s</button>
-      <button class="button" width ="15px" id="1min">1m</button>
-      <button class="button" width ="15px" id="2min">2m</button>
+    <p id="popupTitle">
+      <span>Tab Time</span><br>Select Delay
+    </p>
+    <div class="buttons">
+      <div class="topRow">
+        <button class="button" id="15sec">15 seconds</button>
+        <button class="button" id="30sec">30 seconds</button>
+      </div>
+      <div class="bottomRow">
+        <button class="button" id="1min">1 minutes</button>
+        <button class="button" id="2min">2 minutes</button>
+      </div>
+      <button id="btnSettings">Settings</button>
     </div>
   </body>
 </html>

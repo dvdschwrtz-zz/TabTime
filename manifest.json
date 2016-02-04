@@ -1,26 +1,27 @@
 {
   "manifest_version": 2,
 
-  "name": "Chrome Mom",
-  "description": "This extension will monitor your internet usage",
+  "name": "Tab Time",
+  "description": "Allows you to snooze a tab for a set duration",
   "version": "1.0",
   "browser_action": {
-   "default_icon": "icon.png",
+   "default_icon": "icon_clock_copy.png",
    "default_popup": "popup.html"
   },
   "background" : {
     "scripts": ["background.js", "moment.js"]
   },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "icons": {
+    "128": "clock-128.png"
+  },
   "permissions": [
-   "browsingData",
-   "alarms",
    "background",
-   "contentSettings",
-   "history",
    "storage",
    "notifications",
-   "webRequest",
-   "webRequestBlocking",
    "tabs"
    ]
 }

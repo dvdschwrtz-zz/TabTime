@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', function(){
-  document.getElementById('15sec').addEventListener('click', function() { handler(15) });
-  document.getElementById('30sec').addEventListener('click', function() { handler(30) });
-  document.getElementById('1min').addEventListener('click', function() { handler(60) });
-  document.getElementById('2min').addEventListener('click', function() { handler(120) });
+  document.getElementById('15sec').addEventListener('click', function() { handler(2, '15 seconds') });
+  document.getElementById('30sec').addEventListener('click', function() { handler(30, '30 seconds') });
+  document.getElementById('1min').addEventListener('click', function() { handler(60, '1 minute') });
+  document.getElementById('2min').addEventListener('click', function() { handler(120, '2 minutes') });
+  document.getElementById('btnSettings').addEventListener('click', settingsHandle);
 });
 
-function handler(timeDelay) {
+function handler(timeDelay, desc) {
   chrome.tabs.query({currentWindow: true, active: true},
     function(tabs) {
       // save the url and correct timestamp
       var tmpObj = {};
-      tmpObj[tabs[0].url] = moment().add(timeDelay, 's').toString();
+      tmpObj[tabs[0].url] = [moment().toISOString(),
+        moment().add(timeDelay, 's').toISOString(),
+        desc
+      ];
 
       chrome.tabs.remove(tabs[0].id, function(){})
 
@@ -18,4 +22,8 @@ function handler(timeDelay) {
         console.log(tmpObj);
       });
     });
+}
+
+function settingsHandle() {
+  chrome.runtime.openOptionsPage();
 }
