@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  document.getElementById('15sec').addEventListener('click', function() { handler(2, '15 seconds') });
+  document.getElementById('15sec').addEventListener('click', function() { handler(15, '15 seconds') });
   document.getElementById('30sec').addEventListener('click', function() { handler(30, '30 seconds') });
   document.getElementById('1min').addEventListener('click', function() { handler(60, '1 minute') });
   document.getElementById('2min').addEventListener('click', function() { handler(120, '2 minutes') });

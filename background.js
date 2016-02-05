@@ -1,14 +1,14 @@
 window.setInterval(function() {
 
   //props has three fields
-  // 0) time the delay was set
-  // 1) delayed time
-  // 2) description (time delay clicked)
+  // 0 time the delay was set
+  // 1 delayed time
+  // 2 description (time delay clicked)
 
   //output array has the following data
-  // 0) url
-  // 1) time delay was set
-  // 2) description (time delay clicked)
+  // 0 url
+  // 1 time delay was set
+  // 2 description (time delay clicked)
 
   function getDates(obj) {
     var result = [];
