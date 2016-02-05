@@ -23,6 +23,8 @@ function getNappedTabs(){
       container.appendChild(li);
     }
   });
+
+  setTimeout(getNappedTabs, 1000);
 }
 
 function tabListRemove(e) {
